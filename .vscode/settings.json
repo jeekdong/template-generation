@@ -1,6 +1,0 @@
-{
-    "eslint.options": {
-        "configFile": ".eslintrc.js"
-    },
-    "editor.tabSize": 2
-}
