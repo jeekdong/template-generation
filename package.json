@@ -1,0 +1,35 @@
+{
+  "name": "template-generation",
+  "version": "0.1.0",
+  "description": "Non-invasive event track",
+  "main": "dist/templateGeneration.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "template",
+    "generation"
+  ],
+  "unpkg": "dist/templateGeneration.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeekdong/event-tracking.git"
+  },
+  "author": "jeekdong@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}
