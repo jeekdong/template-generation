@@ -9,11 +9,16 @@ function generator(options) {
   const promptList = options.promptList
   inquirer.prompt(promptList).then(answers => {
     // 要生成文件的目录名
-    exists(options.genDirName, options.outputPath).then(res => {
+    exists(options.outputName, options.outputPath).then(res => {
       if(res) {
         console.log('生成目标文件夹存在同名文件')
       } else {
-        readTemp(options.templatePath, genNew, answers)
+        // 区分生成单个文件还是目录文件
+        if(fs.statSync(options.templatePath).isDirectory()) {
+          readTemp(options.templatePath, genNew, answers)
+        } else {
+          genNew(options.templatePath, answers, options.outputName)
+        }
         writeFile(fileObj, options.outputPath, answers)
       }
     })
@@ -37,9 +42,16 @@ function readTemp(tempPath, callback, answers) {
   })
 }
 
-function genNew(filePath, answers) {
+function genNew(filePath, answers, newFileName) {
   let newPath = filePath.replace(process.cwd() + '/', '')
   let text = fs.readFileSync(filePath).toString()
+  if(newFileName) {
+    // 生成新文件路径名
+    let arr = filePath.split('/')
+    arr[arr.length - 1] = newFileName
+    newPath = arr.join('/')
+    
+  }
   fileObj[newPath] = TemplateEngine(text, answers)
 }
 

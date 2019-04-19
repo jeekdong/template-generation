@@ -9,7 +9,7 @@ generator({
       name: 'title'
     }
   ],
-  genDirName: 'gogo',
+  outputName: 'gogo',
   outputPath: './demo',
   templatePath: './test'
 })

@@ -1,7 +1,7 @@
 {
   "name": "template-generation",
   "version": "0.1.0",
-  "description": "Non-invasive event track",
+  "description": "Automatically generate files based on templates",
   "main": "dist/templateGeneration.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,7 @@
   "unpkg": "dist/templateGeneration.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeekdong/event-tracking.git"
+    "url": "https://github.com/jeekdong/template-generation.git"
   },
   "author": "jeekdong@gmail.com",
   "license": "ISC",
