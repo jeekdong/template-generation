@@ -1,7 +1,5 @@
 const generator = require('./dist/templateGeneration')
-// const path = require('path')
-
-// console.log(path.resolve(__dirname, 'test/hh'))
+// const generator = require('./src/index')
 
 generator({
   promptList: [
