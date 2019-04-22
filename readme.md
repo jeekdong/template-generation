@@ -47,7 +47,7 @@ generator({
 
 ## params
 
-generator函数接受四个参数
+generator函数接受一个配置对象，配置对象有四个参数
 
 * 第一个参数是 [Inquirer.js](https://www.npmjs.com/package/inquirer) 的问题数组
 * 第二个参数是输出文件名(仅在输入模板 `templatePath` 为文件时有效)

@@ -50,7 +50,6 @@ function genNew(filePath, answers, newFileName) {
     let arr = filePath.split('/')
     arr[arr.length - 1] = newFileName
     newPath = arr.join('/')
-    
   }
   fileObj[newPath] = TemplateEngine(text, answers)
 }

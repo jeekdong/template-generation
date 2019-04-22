@@ -1,10 +1,6 @@
 const tmpl = (str, data) => {
   let tpl = ''
-  if (/[\s\W]/g.test(str)) {
-    tpl = str
-  } else {
-    tpl = document.querySelector(str).innerHTML
-  }
+  tpl = str
 
   let res = `let arr = []; arr.push(\``
   res += `${tpl
