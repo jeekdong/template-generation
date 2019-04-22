@@ -1,6 +1,6 @@
 {
   "name": "template-generation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Automatically generate files based on templates",
   "main": "dist/templateGeneration.js",
   "scripts": {
