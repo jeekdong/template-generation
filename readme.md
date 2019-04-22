@@ -17,14 +17,14 @@ $ yarn add template-generation --dev
 引入:
 
 ```js
-const generator = require('template-generation')
+const Generator = require('template-generation')
 ```
 
 ### example
 
 ```js
 // script.js
-generator({
+new Generator({
   promptList: [
     {
       type: 'input',
@@ -47,7 +47,7 @@ generator({
 
 ## params
 
-generator函数接受一个配置对象，配置对象有四个参数
+Generator构造函数接受一个配置对象，配置对象有四个参数
 
 * 第一个参数是 [Inquirer.js](https://www.npmjs.com/package/inquirer) 的问题数组
 * 第二个参数是输出文件名(仅在输入模板 `templatePath` 为文件时有效)
