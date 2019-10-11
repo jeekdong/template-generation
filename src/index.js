@@ -46,7 +46,7 @@ class Generator {
 
   exists(name, outputPath) {
     return new Promise(async resolve => {
-      resolve(fs.existsSync(path.resolve(process.cwd(), outputPath, name)))
+      resolve(fs.existsSync(path.resolve(__dirname, outputPath, name)))
     })
   }
 
@@ -63,7 +63,7 @@ class Generator {
 
   genNew(filePath, answers, newFileName) {
     let { templatePath } = this.options
-    let newPath = filePath.replace(path.resolve(process.cwd() , templatePath) + '/', '')
+    let newPath = filePath.replace(path.resolve(__dirname , templatePath) + '/', '')
     console.log(newPath)
     let text = fs.readFileSync(filePath).toString()
     if(newFileName) {
@@ -89,7 +89,7 @@ class Generator {
       console.log('make', item)
       fs.mkdir(
         path.resolve(
-          process.cwd(),
+          __dirname,
           outputPath,
           item.split('/')
             .slice(0, -1)
@@ -99,7 +99,7 @@ class Generator {
         err => {
           if (err) throw err
           fs.writeFileSync(
-            path.resolve(process.cwd(), outputPath, item),
+            path.resolve(__dirname, outputPath, item),
             fileObj[item],
             'utf8'
           )
