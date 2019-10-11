@@ -1,4 +1,4 @@
-// const generator = require('template-generation')
+// const Generator = require('./dist/templateGeneration')
 const Generator = require('./src/index')
 
 function init() {
