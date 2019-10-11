@@ -14,6 +14,7 @@ module.exports = {
       "sourceType": "module"
   },
   "rules": {
+    "no-console": "off",
     'arrow-parens': 0, // allow paren-less arrow functions
     'generator-star-spacing': 0, // allow async-await
     'no-unused-vars': 'error', // disabled no ununsed var  `V1.1`
